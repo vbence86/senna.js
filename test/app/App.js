@@ -1588,7 +1588,7 @@ describe('App', function() {
 			}
 
 			load() {
-				return new CancellablePromise(resolve => setTimeout(resolve, 100));
+				return new CancellablePromise(resolve => setTimeout(resolve, 10));
 			}
 		}
 
@@ -1620,7 +1620,7 @@ describe('App', function() {
 					}
 				});
 				globals.window.history.go(-1);
-				setTimeout(() => globals.window.history.go(-1), 50);
+				setTimeout(() => globals.window.history.go(-1), 5);
 			});
 	});
 
